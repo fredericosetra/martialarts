@@ -1,6 +1,12 @@
 import React from "react";
 import "react-pro-sidebar/dist/css/styles.css";
-import { Menu, MenuItem, SubMenu, SidebarHeader } from "react-pro-sidebar";
+import HomeIcon from "@mui/icons-material/Home";
+import MenuIcon from "@mui/icons-material/Menu";
+import PasswordIcon from "@mui/icons-material/Password";
+import HowToRegIcon from "@mui/icons-material/HowToReg";
+import AssessmentOutlinedIcon from "@mui/icons-material/AssessmentOutlined";
+import PersonAddIcon from "@mui/icons-material/PersonAdd";
+import { Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import { Link } from "react-router-dom";
 import * as S from "./styled";
 
@@ -8,17 +14,24 @@ const Sidebar = () => {
   return (
     <>
       <S.CustomProSidebar>
-        <SidebarHeader>LOGO HERE</SidebarHeader>
-        <Menu iconShape="square">
-          <MenuItem>
+        <Menu>
+          <MenuItem icon={<HomeIcon />}>
             <Link to="/">Home</Link>
           </MenuItem>
-          <SubMenu title="sou um submenu">
-            <MenuItem>
+
+          <SubMenu title="sou um submenu" icon={<MenuIcon />}>
+            <MenuItem icon={<PasswordIcon />}>
               <Link to="/login">login</Link>
             </MenuItem>
-            <MenuItem>
+
+            <MenuItem icon={<HowToRegIcon />}>
               <Link to="/studentregistration">studentregistration</Link>
+            </MenuItem>
+          </SubMenu>
+
+          <SubMenu title="Relatórios" icon={<AssessmentOutlinedIcon />}>
+            <MenuItem icon={<PersonAddIcon />}>
+              <Link to="/relatorios/alunoativos">Alunos Ativos</Link>
             </MenuItem>
           </SubMenu>
         </Menu>

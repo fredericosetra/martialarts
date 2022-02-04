@@ -2,10 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import Login from "./pages/login";
-import StudentRegistration from "./pages/studentRegistration";
 import Sidebar from "./components/Sidebar";
 import TopBar from "./components/Topbar";
+import ReportStudentActive from "./pages/reports";
 import * as S from "./AppStyled";
+import StudentRegistration from "./pages/studentRegistration";
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
               <Route
                 path="/studentregistration"
                 element={<StudentRegistration />}
+              />
+              <Route
+                path="/relatorios/alunoativos"
+                element={<ReportStudentActive />}
               />
             </Routes>
           </S.AlignContent>
