@@ -1,13 +1,13 @@
-import React, { useState, createContext } from "react";
+import React, { useState } from "react";
 
-export const AppContext = createContext();
+export const Context = React.createContext({});
 
-export const Provider = (props) => {
-  const [sideBarCollapse, setSideBarCollapse] = useState(true);
+export const Provider = ({ children }) => {
+  const [sideBarCollapse, setSideBarCollapse] = useState(false);
 
   return (
-    <AppContext.Provider value={[sideBarCollapse, setSideBarCollapse]}>
-      {props.children}
-    </AppContext.Provider>
+    <Context.Provider value={[sideBarCollapse, setSideBarCollapse]}>
+      {children}
+    </Context.Provider>
   );
 };

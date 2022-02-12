@@ -8,12 +8,15 @@ import AssessmentOutlinedIcon from "@mui/icons-material/AssessmentOutlined";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import { Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import { Link } from "react-router-dom";
+import { Context } from "../../context/Global/context";
 import * as S from "./styled";
 
 const Sidebar = () => {
+  const [sideBarCollapse] = React.useContext(Context);
+
   return (
     <>
-      <S.CustomProSidebar>
+      <S.CustomProSidebar collapsed={sideBarCollapse}>
         <Menu>
           <MenuItem icon={<HomeIcon />}>
             <Link to="/">Home</Link>
