@@ -1,12 +1,12 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/home";
-import Login from "./pages/login";
-import Sidebar from "./components/Sidebar";
-import TopBar from "./components/Topbar";
-import ReportStudentActive from "./pages/reports";
-import * as S from "./AppStyled";
-import StudentRegistration from "./pages/studentRegistration";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/home';
+import Login from './pages/login';
+import Sidebar from './components/Sidebar';
+import TopBar from './components/Topbar';
+import ReportStudentActive from './pages/reports';
+import * as S from './AppStyled';
+import StudentRegistration from './pages/studentRegistration';
 
 function App() {
   return (
@@ -17,14 +17,14 @@ function App() {
           <S.AlignContent>
             <TopBar />
             <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route path="/login" element={<Login />} />
+              <Route exact path='/' element={<Home />} />
+              <Route path='/login' element={<Login />} />
               <Route
-                path="/studentregistration"
+                path='/studentregistration'
                 element={<StudentRegistration />}
               />
               <Route
-                path="/relatorios/alunoativos"
+                path='/relatorios/alunoativos'
                 element={<ReportStudentActive />}
               />
             </Routes>

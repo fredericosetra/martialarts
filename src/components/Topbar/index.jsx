@@ -1,6 +1,6 @@
-import React from "react";
-import CollapseButton from "../SwitchButton";
-import * as S from "./styled";
+import React from 'react';
+import CollapseButton from '../SwitchButton';
+import * as S from './styled';
 
 const TopBar = () => {
   return (

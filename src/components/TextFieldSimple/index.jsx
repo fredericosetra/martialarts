@@ -1,10 +1,10 @@
-import React from "react";
-import * as S from "./styled";
+import React from 'react';
+import * as S from './styled';
 
 export default function TextFieldSimple({
   placeholder,
-  widthField = "250px",
-  heightField = "20px",
+  widthField = '250px',
+  heightField = '20px',
   background,
   outline,
   inputValue,
@@ -16,7 +16,7 @@ export default function TextFieldSimple({
 
   return (
     <S.InputSimple
-      type="text"
+      type='text'
       placeholder={placeholder}
       widthField={widthField}
       heightField={heightField}

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from 'react';
 
-const ReportStudentActive = () => {
+function ReportStudentActive() {
   return <h1>repots</h1>;
-};
+}
 
 export default ReportStudentActive;
