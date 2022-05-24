@@ -28,7 +28,7 @@ const Sidebar = () => {
             </MenuItem>
 
             <MenuItem icon={<HowToRegIcon />}>
-              <Link to="/studentregistration">studentregistration</Link>
+              <Link to="/studentregistration">Cadastro de Alunos</Link>
             </MenuItem>
           </SubMenu>
 
