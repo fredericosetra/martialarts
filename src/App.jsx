@@ -10,12 +10,12 @@ import StudentRegistration from './pages/studentRegistration';
 
 function App() {
   return (
-    <>
-      <S.Container>
-        <Router>
-          <Sidebar />
-          <S.AlignContent>
-            <TopBar />
+    <S.Container>
+      <Router>
+        <Sidebar />
+        <S.AlignContent>
+          <TopBar />
+          <S.MarginGlobal>
             <Routes>
               <Route exact path='/' element={<Home />} />
               <Route path='/login' element={<Login />} />
@@ -28,10 +28,10 @@ function App() {
                 element={<ReportStudentActive />}
               />
             </Routes>
-          </S.AlignContent>
-        </Router>
-      </S.Container>
-    </>
+          </S.MarginGlobal>
+        </S.AlignContent>
+      </Router>
+    </S.Container>
   );
 }
 

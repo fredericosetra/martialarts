@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Context } from '../../context/Global/context';
 import Switch from '@mui/material/Switch';
+import { Context } from '../../context/Global/context';
 
 export default function CollapseButton() {
   const [sideBarCollapse, setSideBarCollapse] = React.useContext(Context);
@@ -9,9 +9,5 @@ export default function CollapseButton() {
     setSideBarCollapse(!sideBarCollapse);
   };
 
-  return (
-    <>
-      <Switch defaultChecked onChange={() => collapseMenu()} />
-    </>
-  );
+  return <Switch defaultChecked onChange={() => collapseMenu()} />;
 }
